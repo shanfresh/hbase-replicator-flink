@@ -1,4 +1,4 @@
-package com.xiaomi.inf.hbase.replicator;
+package com.xiaomi.inf.hbase.replicator.model;
 
 import java.io.Serializable;
 
@@ -8,6 +8,15 @@ import java.io.Serializable;
 public class HBaseOperationWrapper implements Serializable {
     private String hbaseReginServerName;
     private String walRow;
+
+    public HBaseOperationWrapper() {
+    }
+
+    public HBaseOperationWrapper(String hbaseReginServerName, String walRow) {
+        this.hbaseReginServerName = hbaseReginServerName;
+        this.walRow = walRow;
+    }
+
     public String getHbaseReginServerName() {
         return hbaseReginServerName;
     }
@@ -22,5 +31,13 @@ public class HBaseOperationWrapper implements Serializable {
 
     public void setWalRow(String walRow) {
         this.walRow = walRow;
+    }
+
+
+    @Override
+    public String toString() {
+        return "HBaseOperationWrapper{" +
+                hbaseReginServerName + '\'' +
+                ", " + walRow + '}';
     }
 }

@@ -1,0 +1,15 @@
+*.iml
+*.idea
+*/target/
+*.log*
+*.pid
+*.out
+nohup.out
+*.zip
+/com.yidian.data.common/src/main/gen/
+*.jar
+*/test-output/
+/metastore_db/
+/shark-meta/scripts/temp/
+*/target/*
+target
